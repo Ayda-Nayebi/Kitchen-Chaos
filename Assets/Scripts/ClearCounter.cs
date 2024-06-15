@@ -14,4 +14,8 @@ public class ClearCounter : BaseCounter
      
     }
 
+    public override void Interact(PlayerNew player)
+    {
+    }
+
 }
