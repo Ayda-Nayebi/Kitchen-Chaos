@@ -10,9 +10,9 @@ public class SelectedCounterVisual : MonoBehaviour
    
     private void Start()
     {
-        // Player.Instance.OnSelectedChanged += Player_OnSelectedChanged;
+         Player.Instance.OnSelectedChanged += Player_OnSelectedChanged;
 
-        FindAnyObjectByType<PlayerNew>().OnSelectedChanged += Player_OnSelectedChanged;
+      //  FindAnyObjectByType<PlayerNew>().OnSelectedChanged += Player_OnSelectedChanged;
     }
 
     private void Player_OnSelectedChanged(BaseCounter selectedCounter)
@@ -27,17 +27,17 @@ public class SelectedCounterVisual : MonoBehaviour
         }
     }
 
-    //private void Player_OnSelectedChanged(object sender, Player.OnSelectedChangedEventArgs e)
-    //{
-    //    if (e.selectedCounter == baseCounter )
-    //    {
-    //        Show();
-    //    }
-    //    else
-    //    {
-    //        Hide();
-    //    }
-    //}
+    private void Player_OnSelectedChanged(object sender, Player.OnSelectedChangedEventArgs e)
+    {
+       if (e.selectedCounter == baseCounter )
+        {
+          Show();
+       }
+      else
+       {
+           Hide();
+       }
+    }
 
     private void Show()
     {
